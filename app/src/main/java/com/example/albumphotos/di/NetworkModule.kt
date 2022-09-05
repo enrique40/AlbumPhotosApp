@@ -1,6 +1,6 @@
 package com.example.albumphotos.di
 
-import com.example.albumphotos.data.remote.UnsplashApi
+import com.example.albumphotos.data.remote.AlbumPhotosApi
 import com.example.albumphotos.util.Constants.BASE_URL
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
@@ -46,7 +46,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun providerUnsplashApi(retrofit: Retrofit): UnsplashApi {
-        return retrofit.create(UnsplashApi::class.java)
+    fun providerAlbumPhotosApi(retrofit: Retrofit): AlbumPhotosApi {
+        return retrofit.create(AlbumPhotosApi::class.java)
     }
 }
